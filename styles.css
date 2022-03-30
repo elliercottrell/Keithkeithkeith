@@ -6,31 +6,175 @@ body:hover {
   background-color: #ffe680;
   cursor: crosshair;
 }
-h1 {
-  color: #fe94c2;
-  background-color: #ffe680;
-  font-size: 200px;
-  font-family: "Rubik Mono One", sans-serif;
+.type {
   margin: -10px;
   text-align: center;
   padding-top: 150px;
   padding-bottom: 150px;
 }
 
-h1:hover {
+.type:hover {
   cursor: crosshair;
   color: #ffe680;
   background-color: #fe94c2;
 }
 
+@charset "UTF-8";
+@-webkit-keyframes typed {
+  /* string 1, char 1 */
+  0%,
+  2.5631025641% {
+    content: "K";
+  }
+  /* string 1, char 2 */
+  2.5641025641%,
+  5.1272051282% {
+    content: "Ke";
+  }
+  /* string 1, char 3 */
+  5.1282051282%,
+  7.6913076923% {
+    content: "Kei";
+  }
+  /* string 1, char 4 */
+  7.6923076923%,
+  10.2554102564% {
+    content: "Keit";
+  }
+  /* string 1, char 5 */
+  10.2564102564%,
+  66.1528461538% {
+    content: "Keith";
+  }
+  /* string 1, char 6 */
+  66.1538461538%,
+  68.2041282051% {
+    content: "Keit";
+  }
+  /* string 1, char 7 */
+  68.2051282051%,
+  70.2554102564% {
+    content: "Kei";
+  }
+  /* string 1, char 8 */
+  70.2564102564%,
+  72.3066923077% {
+    content: "Ke";
+  }
+  /* string 1, char 9 */
+  72.3076923077%,
+  74.357974359% {
+    content: "K";
+  }
+  /* string 1, char 10 */
+  74.358974359%,
+  100% {
+    content: "​";
+  }
+}
+@keyframes typed {
+  /* string 1, char 1 */
+  0%,
+  2.5631025641% {
+    content: "K";
+  }
+  /* string 1, char 2 */
+  2.5641025641%,
+  5.1272051282% {
+    content: "Ke";
+  }
+  /* string 1, char 3 */
+  5.1282051282%,
+  7.6913076923% {
+    content: "Kei";
+  }
+  /* string 1, char 4 */
+  7.6923076923%,
+  10.2554102564% {
+    content: "Keit";
+  }
+  /* string 1, char 5 */
+  10.2564102564%,
+  66.1528461538% {
+    content: "Keith";
+  }
+  /* string 1, char 6 */
+  66.1538461538%,
+  68.2041282051% {
+    content: "Keit";
+  }
+  /* string 1, char 7 */
+  68.2051282051%,
+  70.2554102564% {
+    content: "Kei";
+  }
+  /* string 1, char 8 */
+  70.2564102564%,
+  72.3066923077% {
+    content: "Ke";
+  }
+  /* string 1, char 9 */
+  72.3076923077%,
+  74.357974359% {
+    content: "K";
+  }
+  /* string 1, char 10 */
+  74.358974359%,
+  100% {
+    content: "​";
+  }
+}
+@-webkit-keyframes beam-blink {
+  100% {
+    border-color: transparent;
+  }
+}
+@keyframes beam-blink {
+  100% {
+    border-color: transparent;
+  }
+}
+* {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+html,
+.type {
+  height: 70%;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffe680;
+  font-size: calc(100px + 2vw);
+  font-family: "Rubik Mono One", sans-serif;
+  color: #fe94c2;
+}
+.type::after {
+  content: "​";
+  position: relative;
+  top: -13px;
+  display: inline-block;
+  padding-right: 3px;
+  padding-right: calc(3px + 0.1vw);
+  border-right: 10px solid #fe94c2;
+  border-right: calc(1.1vw + 50px) solid #fe94c2;
+  white-space: nowrap;
+  -webkit-animation: typed 4s linear 1s infinite, beam-blink 1s infinite;
+  animation: typed 4s linear 1s infinite, beam-blink 1s infinite;
+}
+
 @media (max-width: 900px) {
-  h1 {
+  .type {
     font-size: 100px;
   }
 }
 
 @media (max-width: 600px) {
-  h1 {
+  .type {
     font-size: 50px;
   }
 }
