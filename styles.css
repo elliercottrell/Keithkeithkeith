@@ -4,6 +4,7 @@ body {
 
 body:hover {
   background-color: #ffe680;
+  cursor: crosshair;
 }
 h1 {
   color: #fe94c2;
